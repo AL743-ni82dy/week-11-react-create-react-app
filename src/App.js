@@ -11,7 +11,8 @@ class Clock extends React.Component {
     // bad code:  this.state.displayTime = ''
     // we must set state to an object
     this.state = {
-      displayTime: ''
+      displayTime: '',
+      visitorName: 'Galaxy Cardiff'
     }
   }
 
@@ -34,8 +35,8 @@ class Clock extends React.Component {
   // 'render' is the standard for getting
   // html into our web page
   render () {
-    const displayTime = this.state.displayTime;
-    const visitorName = "Galaxy Stern"
+    const {displayTime, visitorName} = this.state;
+
     return (
       <div className="clock">
         <h2>Time is {displayTime}</h2>
